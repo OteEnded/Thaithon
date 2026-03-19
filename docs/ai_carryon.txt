@@ -12,10 +12,10 @@ c:\data\Pythai
 Repository:
 https://github.com/OteEnded/Thaithon
 
-Old repository (archived, do not use):
+Old repository (archived):
 https://github.com/OteEnded/Pythai
-- ยังไม่ได้ archive อย่างเป็นทางการ
-- TODO: ไปที่ Settings > Danger Zone > Archive, และเปลี่ยน description เป็น "⚠️ Moved to https://github.com/OteEnded/Thaithon"
+- Archived แล้ว (read-only)
+- ไม่ต้องทำอะไรเพิ่มกับ repo นี้อีกแล้ว
 
 Main branch and release status:
 - Branch: main
@@ -94,7 +94,7 @@ Known caveats for next AI:
 
 3) Minor cleanup candidates (not blockers)
 - libs/เวลา.py has some unused imports.
-- Old repo OteEnded/Pythai should be archived with redirect message.
+- Old repo OteEnded/Pythai — archived แล้ว ✓
 - No git tag created on Thaithon repo yet — DONE, v0.1.0 and v0.1.1 pushed.
 
 What has already been done and should not be re-done blindly:
