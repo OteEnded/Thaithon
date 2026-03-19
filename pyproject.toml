@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pythai"
+version = "0.1.0"
+description = "Thai-first Python helper libraries with Thai function names"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Pythai Contributors" }
+]
+keywords = ["thai", "python", "education", "helpers", "localization"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Software Development :: Libraries"
+]
+
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "libs"}
+py-modules = [
+    "ไพท่อน",
+    "ไพท่อน_builtins",
+    "คณิต",
+    "เวลา",
+    "สุ่ม",
+    "สถิติ",
+    "เจสัน",
+    "เรกซ์",
+    "เส้นทาง",
+    "ซีเอสวี"
+]

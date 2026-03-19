@@ -1,0 +1,117 @@
+# Pythai
+
+โปรเจกต์นี้เป็น playground สำหรับทำ helper/library ภาษาไทยบน Python โดยตั้งชื่อฟังก์ชันให้เป็นคำไทยที่อ่านง่าย และใช้งานได้ใกล้เคียง library มาตรฐาน
+
+## โครงสร้างโปรเจกต์
+
+- `libs/`
+  - รวม library หลักทั้งหมด
+  - `ไพท่อน.py`, `ไพท่อน_builtins.py`
+  - `คณิต.py`, `เวลา.py`, `สุ่ม.py`, `สถิติ.py`
+  - `เจสัน.py`, `เรกซ์.py`, `เส้นทาง.py`, `ซีเอสวี.py`
+- `examples/`
+  - ตัวอย่างใช้งานสั้น ๆ
+  - `x.py`, `y.py`
+- `tests/`
+  - สคริปต์ทดสอบแต่ละโมดูล
+- `tools/`
+  - utility/debug scripts
+- `docs/`
+  - บันทึก handoff หรือเอกสารประกอบ
+
+## หมวด library ที่มีแล้ว
+
+- Built-ins ภาษาไทย (`ไพท่อน.py`)
+- Math (`คณิต.py`)
+- DateTime + sleep (`เวลา.py`)
+- Random (`สุ่ม.py`)
+- Statistics (`สถิติ.py`)
+- JSON (`เจสัน.py`)
+- Regex (`เรกซ์.py`)
+- File/Path (`เส้นทาง.py`)
+- CSV (`ซีเอสวี.py`)
+
+## หมายเหตุ Unicode
+
+ภาษาไทยบางคำ (เช่นที่มี `ำ`) มีโอกาสพิมพ์คนละ Unicode form ได้ จึงมี alias สำรองบางชื่อเพื่อรองรับการใช้งานร่วมกัน
+
+## วิธีรันตัวอย่าง
+
+เปิด terminal ที่ root ของโปรเจกต์ แล้วรัน:
+
+```bash
+python examples/y.py
+python examples/x.py
+```
+
+## วิธีรันเทส
+
+```bash
+python tests/test_data_libs.py
+python tests/test_math.py
+python tests/test_math_extended.py
+python tests/test_datetime.py
+python tests/test_random_stats.py
+python tests/test_helpers.py
+python tests/test_sleep.py
+```
+
+## เริ่มใช้งานกับ Git
+
+โปรเจกต์นี้ถูกเตรียมโครงสร้างและไฟล์พื้นฐานสำหรับ Git แล้ว (`.gitignore`, `.gitattributes`, `.editorconfig`, `LICENSE`, `CHANGELOG.md`, `CONTRIBUTING.md`)
+
+คำสั่งเริ่มต้นที่แนะนำ:
+
+```bash
+git status
+git add .
+git commit -m "chore: initialize Pythai project structure"
+```
+
+## Pre-package Checklist
+
+ก่อนเริ่มทำเป็น package จริง แนะนำให้เช็ก:
+
+- ตั้งชื่อ package ที่จะ publish (เช่น `pythai` หรือชื่อไทยแบบทับศัพท์)
+- รวม API ที่ต้องการเปิด public ให้ชัดในแต่ละไฟล์ `__all__`
+- ให้ test หลักผ่านทั้งหมด
+- เก็บ changelog ให้เป็นเวอร์ชัน (`Unreleased` -> `x.y.z`)
+- เลือกแนวทาง versioning (เช่น SemVer)
+
+## เตรียมปล่อยขึ้น PyPI
+
+โปรเจกต์นี้มีไฟล์ `pyproject.toml` แล้ว และสามารถ build ได้ด้วย PEP 517
+
+1. Build package
+
+```bash
+python -m build
+```
+
+2. ตรวจสอบไฟล์ build
+
+```bash
+python -m twine check dist/*
+```
+
+3. ทดลองปล่อยขึ้น TestPyPI
+
+```bash
+python -m twine upload --repository testpypi dist/*
+```
+
+4. ปล่อยขึ้น PyPI จริง
+
+```bash
+python -m twine upload dist/*
+```
+
+หมายเหตุ:
+- ก่อนปล่อยจริงให้แก้ URL ใน `pyproject.toml` (`Homepage`, `Repository`, `Issues`) ให้เป็นของโปรเจกต์จริง
+- เพิ่ม version ทุกครั้งก่อนปล่อย release ใหม่
+
+## แนวทาง naming
+
+- ใช้คำไทยความหมายตรง เช่น `พิมพ์`, `รับค่า`, `จำนวนเต็ม`, `จำนวนจริง`
+- ลดคำทับศัพท์เท่าที่ทำได้
+- เก็บ compatibility alias ในกรณีที่จำเป็น

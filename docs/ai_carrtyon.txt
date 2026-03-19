@@ -1,0 +1,107 @@
+Project handoff for next AI
+
+Project name:
+Thai Python
+
+Project folder:
+c:\Users\RatnaritJumnong\Downloads\thai python
+
+What this project is:
+- A playful Python helper/library that exposes common Python built-ins with Thai names.
+- The goal is not production readiness yet; it is currently a prototype / playground for Thai-first coding syntax.
+- The project intentionally explores whether Python code can feel more natural to Thai speakers by replacing common built-in names with Thai vocabulary.
+
+Current file structure:
+- ไพท่อน.py
+  - Main library version.
+  - Uses simple alias style like `พิมพ์ = print`.
+  - This is the preferred main file right now.
+- ไพท่อน_builtins.py
+  - Alternate library version.
+  - Uses explicit import style like `from builtins import print as พิมพ์`.
+  - Kept mainly for comparison and design discussion.
+- x.py
+  - Minimal example: input + output.
+- y.py
+  - Slightly richer example using type conversion, length, sorting, max, all.
+- README.md
+  - Current human-readable project summary and next-step notes.
+
+Important design decisions already made:
+- The old lib.py wrapper was deleted because it was no longer useful.
+- The main public naming direction changed away from Thai transliteration toward real Thai words.
+- Example changes:
+  - ปริ้น -> พิมพ์
+  - อินพุต -> รับค่า
+  - อินท์ -> จำนวนเต็ม
+  - ทศนิยม -> จำนวนจริง
+  - ลิสต์ -> รายการ
+  - ดิก -> พจนานุกรม
+  - บูลีน -> ค่าความจริง
+  - แมป -> แปลงทีละตัว
+  - เซต -> กลุ่มไม่ซ้ำ
+  - ทูเพิล -> ชุดข้อมูลคงที่
+
+Current behavior choices:
+- เรียงลำดับ(...)
+  - Intentionally behaves like list.sort()
+  - Mutates the original list and returns the list
+- เรียงแล้ว(...)
+  - Intentionally behaves like sorted()
+  - Returns a new sorted value
+
+Important technical caveat:
+- There is a Unicode normalization issue with some Thai identifiers.
+- Specifically, words like ลำ and จำนวน can be typed in visually similar but different Unicode forms.
+- This caused the static analyzer to report names as undefined even when they looked correct to the eye.
+- To stabilize the prototype, compatibility aliases were added for alternate Unicode forms.
+- Examples currently included:
+  - เรียงลําดับ = เรียงลำดับ
+  - จํานวนจริง = จำนวนจริง
+  - จํานวนเต็ม = จำนวนเต็ม
+- If future work introduces more Thai identifiers with sara am or similar characters, expect the same issue and handle carefully.
+
+Current compatibility stance:
+- The new Thai-native names are intended to be the main API.
+- Some older transliterated names are still kept as compatibility aliases inside the library files so older examples do not immediately break.
+- A future cleanup pass may remove those compatibility aliases if the project decides to go fully Thai-only.
+
+Example code currently expects this style:
+- from ไพท่อน import *
+- ใช้ พิมพ์, รับค่า, จำนวนเต็ม, จำนวนจริง, รายการ, เรียงลำดับ, เรียงแล้ว
+
+What was already validated:
+- Syntax/errors were checked for:
+  - ไพท่อน.py
+  - ไพท่อน_builtins.py
+  - x.py
+  - y.py
+- At the time of handoff, these files had no reported errors.
+
+Suggested next steps for the next AI:
+1. Decide whether to keep compatibility aliases or remove them.
+2. Expand Thai helpers for common list/string/dict operations.
+3. Add tests so the Thai aliases are verified against Python built-in behavior.
+4. Decide whether the project should remain a loose folder prototype or become a real package.
+5. Consider renaming the folder if package import behavior becomes important, because the current folder name contains a space.
+
+Suggested helper ideas for future work:
+- เพิ่ม
+- ลบ
+- แทรก
+- นับ
+- หาตำแหน่ง
+- ต่อท้ายข้อความ
+- ตัดช่องว่าง
+- แยกข้อความ
+- รวมข้อความ
+
+Notes about intent:
+- The user liked the idea and found it fun.
+- The tone of the work so far was exploratory and playful, but with enough structure that another AI can continue from here.
+- Preserve the main concept: Thai-first coding vocabulary, readable examples, minimal friction.
+
+If you continue editing:
+- Prefer updating README.md together with API changes.
+- Keep examples x.py and y.py in sync with the current naming style.
+- Be cautious with Unicode normalization when adding Thai identifiers.
