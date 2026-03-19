@@ -12,3 +12,4 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Updated examples and tests to import modules from libs/ reliably.
 - Updated README with new structure and run instructions.
+- Switched license from MIT to Apache-2.0 and added attribution files.

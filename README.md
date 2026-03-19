@@ -107,8 +107,13 @@ python -m twine upload dist/*
 ```
 
 หมายเหตุ:
-- ก่อนปล่อยจริงให้แก้ URL ใน `pyproject.toml` (`Homepage`, `Repository`, `Issues`) ให้เป็นของโปรเจกต์จริง
 - เพิ่ม version ทุกครั้งก่อนปล่อย release ใหม่
+
+## License และ Attribution
+
+- โปรเจกต์นี้ใช้สัญญาอนุญาต Apache-2.0
+- กรุณาเก็บไฟล์ `LICENSE` และ `NOTICE` ไว้เมื่อมีการแจกจ่ายต่อ
+- หากใช้งานในงานวิจัย/บทความ แนะนำให้อ้างอิงจากไฟล์ `CITATION.cff`
 
 ## แนวทาง naming
 
