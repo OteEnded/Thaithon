@@ -6,6 +6,45 @@
 
 โปรเจกต์นี้เป็น playground สำหรับทำ helper/library ภาษาไทยบน Python โดยตั้งชื่อฟังก์ชันให้เป็นคำไทยที่อ่านง่าย และใช้งานได้ใกล้เคียง library มาตรฐาน
 
+## Write Python in Thai 🇹🇭
+
+Thaithon is an experimental layer that lets you write Python code using Thai-style syntax.
+
+## Install
+
+```bash
+pip install thaithon
+```
+
+## Example
+
+```python
+from thaithon import พิมพ์
+
+พิมพ์("สวัสดีโลก")
+```
+
+## What is this?
+
+Thaithon is designed for:
+
+- Learning Python in a more familiar language
+- Experimenting with alternative syntax
+- Having fun with code
+
+## What this is NOT
+
+- Not a replacement for Python
+- Not intended for production use
+
+## Why?
+
+Because programming should be expressive - and language shouldn't be a barrier.
+
+## Status
+
+Experimental 🚧
+
 ## โครงสร้างโปรเจกต์
 
 - `libs/`
