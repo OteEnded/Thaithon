@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "thaithon"
-version = "0.1.1"
+version = "0.2.0"
 description = "Thai-first Python helper libraries with Thai function names"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,6 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Education",
     "Topic :: Software Development :: Libraries"
 ]
@@ -40,5 +41,6 @@ py-modules = [
     "เจสัน",
     "เรกซ์",
     "เส้นทาง",
-    "ซีเอสวี"
+    "ซีเอสวี",
+    "ระบบ"
 ]

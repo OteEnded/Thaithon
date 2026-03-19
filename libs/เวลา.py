@@ -8,8 +8,7 @@ Usage:
     สร้าง = เวลา.สร้างวันที่(2024, 3, 19)
 """
 
-from datetime import datetime, date, time, timedelta, timezone
-import datetime as dt_module
+from datetime import datetime, date, time, timedelta
 import time as time_module
 
 # Sleep and performance timing
@@ -46,9 +45,11 @@ def ตอนนี้_utc():
     """ดึงเวลาปัจจุบัน (UTC)"""
     return datetime.utcnow()
 
-def มะรุ่งนี้():
-    """ดึงเวลา (เฉพาะเวลา ไม่มีวันที่)"""
+def เวลาตอนนี้():
+    """ดึงเวลาปัจจุบัน (เฉพาะเวลา ไม่มีวันที่) (time)"""
     return datetime.now().time()
+
+มะรุ่งนี้ = เวลาตอนนี้  # backward-compat alias (ชื่อเดิมไม่ตรงความหมาย)
 
 # Creating dates
 def สร้างวันที่(ปี, เดือน, วัน):
@@ -159,7 +160,8 @@ __all__ = [
     "ตอนนี้",
     "วันนี้",
     "ตอนนี้_utc",
-    "มะรุ่งนี้",
+    "เวลาตอนนี้",
+    "มะรุ่งนี้",  # backward-compat alias
     # Creating
     "สร้างวันที่",
     "สร้างเวลา",

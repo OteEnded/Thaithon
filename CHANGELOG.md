@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-03-19
+
+### Added
+- New module `ระบบ.py` — Thai wrapper for `os` and `sys` (env vars, cwd, platform info, etc.)
+- GitHub Actions CI workflow (`.github/workflows/test.yml`) — runs all tests on Python 3.10–3.13.
+- Added Python 3.13 to supported classifiers in `pyproject.toml`.
+
+### Fixed
+- Renamed `มะรุ่งนี้()` in `เวลา.py` to `เวลาตอนนี้()` (old name kept as backward-compat alias).
+- Removed unused imports (`timezone`, `datetime as dt_module`) from `เวลา.py`.
+
 ## [0.1.1] - 2026-03-19
 
 ### Added

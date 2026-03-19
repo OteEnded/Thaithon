@@ -34,6 +34,7 @@
 - Regex (`เรกซ์.py`)
 - File/Path (`เส้นทาง.py`)
 - CSV (`ซีเอสวี.py`)
+- System/OS (`ระบบ.py`)
 
 ## หมายเหตุ Unicode
 
