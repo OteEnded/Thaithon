@@ -1,7 +1,7 @@
 Project handoff for next AI (latest)
 
 Updated at:
-2026-03-19 (session 2)
+2026-03-19 (session 3)
 
 Project name:
 Thaithon (เปลี่ยนชื่อจาก Pythai)
@@ -20,12 +20,12 @@ https://github.com/OteEnded/Pythai
 Main branch and release status:
 - Branch: main
 - Latest commits:
+	- def0994 [feat]: v0.3.0 - add เว็บ.py, อาร์กิวเมนต์.py, extend ระบบ.py with subprocess
+	- a2fb6db [feat]: v0.2.0 - add ระบบ.py, fix เวลา.py, add CI, Python 3.13 support
 	- 49325f2 [docs]: mark Pythai repo as archived, project complete
-	- d79f27f [chore]: bump version to 0.1.1 and add logo to README
-	- b6fab8c [chore]: rename package to thaithon and migrate repo
-- Tags: v0.1.0, v0.1.1, v0.2.0 (บน Thaithon repo แล้ว)
-- Latest PyPI release: thaithon 0.2.0
-- PyPI URL: https://pypi.org/project/thaithon/0.2.0/
+- Tags: v0.1.0, v0.1.1, v0.2.0, v0.3.0 (บน Thaithon repo แล้ว)
+- Latest PyPI release: thaithon 0.3.0
+- PyPI URL: https://pypi.org/project/thaithon/0.3.0/
 
 Maintainer credit (important):
 - Name: OteEnded
@@ -48,12 +48,12 @@ Packaging state:
 - Build backend: setuptools
 - Package name on PyPI: thaithon (เปลี่ยนจาก pythai ที่ถูกคนอื่น claim ไว้แล้ว)
 - py-modules come from libs/:
-	- ไพท่อน, ไพท่อน_builtins, คณิต, เวลา, สุ่ม, สถิติ, เจสัน, เรกซ์, เส้นทาง, ซีเอสวี, ระบบ
+	- ไพท่อน, ไพท่อน_builtins, คณิต, เวลา, สุ่ม, สถิติ, เจสัน, เรกซ์, เส้นทาง, ซีเอสวี, ระบบ, เว็บ, อาร์กิวเมนต์
 - logo.png อยู่ที่ root, ถูก reference ใน README.md ผ่าน GitHub raw URL
 - Last validation performed:
-	- python -m build => success (0.2.0)
+	- python -m build => success (0.3.0)
 	- python -m twine check dist/* => passed
-	- python -m twine upload dist/* => success (0.2.0)
+	- python -m twine upload dist/* => success (0.3.0)
 - GitHub Actions CI: .github/workflows/test.yml (runs on Python 3.10-3.13)
 
 Project structure (organized):
@@ -83,7 +83,9 @@ Important module coverage already implemented:
 - Regex: libs/เรกซ์.py
 - File/Path: libs/เส้นทาง.py
 - CSV: libs/ซีเอสวี.py
-- System/OS: libs/ระบบ.py (os + sys)
+- System/OS: libs/ระบบ.py (os + sys + subprocess)
+- Web/HTTP: libs/เว็บ.py (urllib — GET, POST, JSON, download, URL utils)
+- Argument parsing: libs/อาร์กิวเมนต์.py (argparse)
 
 Known caveats for next AI:
 1) Unicode normalization in Thai identifiers
@@ -95,14 +97,15 @@ Known caveats for next AI:
 - มะรุ่งนี้ ยังคงอยู่เป็น backward-compat alias
 
 3) Minor cleanup candidates (not blockers)
-- เพิ่ม module ใหม่ได้: urllib/requests wrapper, sqlite3 wrapper
+- เพิ่ม module ใหม่ได้: sqlite3 wrapper
 
 What has already been done and should not be re-done blindly:
 - Do NOT re-initialize git.
 - Package name is thaithon (NOT pythai — that name is taken by someone else on PyPI).
-- thaithon 0.1.0, 0.1.1, and 0.2.0 already exist on PyPI — do NOT re-upload same version.
+- thaithon 0.1.0, 0.1.1, 0.2.0, and 0.3.0 already exist on PyPI — do NOT re-upload same version.
 - logo.png already pushed to GitHub and referenced in README.
-- ระบบ.py module added in 0.2.0 — do not re-add.
+- ระบบ.py module added in 0.2.0, extended with subprocess in 0.3.0 — do not re-add.
+- เว็บ.py and อาร์กิวเมนต์.py added in 0.3.0 — do not re-add.
 - GitHub Actions CI workflow exists at .github/workflows/test.yml.
 
 If continuing work in a new chat/session:
