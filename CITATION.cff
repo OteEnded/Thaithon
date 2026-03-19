@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-title: Pythai
+title: Thaithon
 message: "If you use this project, please cite it using the metadata below."
 type: software
 authors:
   - name: OteEnded
     email: ratnaritjumnong@gmail.com
   - name: Pythai Contributors
-repository-code: "https://github.com/OteEnded/Pythai"
+repository-code: "https://github.com/OteEnded/Thaithon"
 license: Apache-2.0
 version: 0.1.0
 date-released: 2026-03-19

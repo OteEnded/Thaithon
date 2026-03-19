@@ -10,7 +10,7 @@ Current workspace root (before user renames folder):
 c:\data\thai python
 
 Repository:
-https://github.com/OteEnded/Pythai
+https://github.com/OteEnded/Thaithon
 
 Main branch and release status:
 - Branch: main
