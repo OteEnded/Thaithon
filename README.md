@@ -1,4 +1,8 @@
-# Pythai
+# Thaithon
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/OteEnded/Thaithon/main/logo.png" alt="Thaithon logo" width="200"/>
+</p>
 
 โปรเจกต์นี้เป็น playground สำหรับทำ helper/library ภาษาไทยบน Python โดยตั้งชื่อฟังก์ชันให้เป็นคำไทยที่อ่านง่าย และใช้งานได้ใกล้เคียง library มาตรฐาน
 
