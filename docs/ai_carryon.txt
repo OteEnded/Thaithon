@@ -4,32 +4,35 @@ Updated at:
 2026-03-19
 
 Project name:
-Pythai
+Thaithon (เปลี่ยนชื่อจาก Pythai)
 
-Current workspace root (before user renames folder):
-c:\data\thai python
+Current workspace root:
+c:\data\Pythai
 
 Repository:
 https://github.com/OteEnded/Thaithon
 
+Old repository (archived, do not use):
+https://github.com/OteEnded/Pythai
+- ยังไม่ได้ archive อย่างเป็นทางการ
+- TODO: ไปที่ Settings > Danger Zone > Archive, และเปลี่ยน description เป็น "⚠️ Moved to https://github.com/OteEnded/Thaithon"
+
 Main branch and release status:
 - Branch: main
 - Latest commits:
-	- c574ba3 by Ote[chore]: add maintainer credit and contact metadata
-	- e70d7bd by Ote[chore]: migrate to Apache-2.0 and add attribution metadata
-	- 2e862f0 by Ote[chore]: initialize Pythai structure and PyPI-ready packaging setup
-- Tag: v0.1.0
-- GitHub Release exists: v0.1.0
-- Release assets uploaded:
-	- pythai-0.1.0-py3-none-any.whl
-	- pythai-0.1.0.tar.gz
+	- d79f27f [chore]: bump version to 0.1.1 and add logo to README
+	- 43101a3 [chore]: add logo and update README heading to Thaithon
+	- b6fab8c [chore]: rename package to thaithon and migrate repo to OteEnded/Thaithon
+- Tags: v0.1.0 (บน Pythai repo เก่า, ไม่มีบน Thaithon repo ใหม่ยังไม่ได้สร้าง)
+- Latest PyPI release: thaithon 0.1.1
+- PyPI URL: https://pypi.org/project/thaithon/0.1.1/
 
 Maintainer credit (important):
 - Name: OteEnded
 - Email: ratnaritjumnong@gmail.com
 - Credit/attribution was added to:
 	- pyproject.toml (authors)
-	- README.md (Credit section)
+	- README.md (logo + heading)
 	- NOTICE
 	- CITATION.cff
 
@@ -40,15 +43,17 @@ License state:
 	- NOTICE (attribution)
 	- CITATION.cff (citation metadata)
 
-Packaging state (PyPI-ready baseline):
+Packaging state:
 - pyproject.toml exists and builds correctly
 - Build backend: setuptools
-- Package name on PyPI: pythai
+- Package name on PyPI: thaithon (เปลี่ยนจาก pythai ที่ถูกคนอื่น claim ไว้แล้ว)
 - py-modules come from libs/:
 	- ไพท่อน, ไพท่อน_builtins, คณิต, เวลา, สุ่ม, สถิติ, เจสัน, เรกซ์, เส้นทาง, ซีเอสวี
+- logo.png อยู่ที่ root, ถูก reference ใน README.md ผ่าน GitHub raw URL
 - Last validation performed:
-	- python -m build => success
+	- python -m build => success (0.1.1)
 	- python -m twine check dist/* => passed
+	- python -m twine upload dist/* => success (0.1.1)
 
 Project structure (organized):
 - libs/      main modules
@@ -56,6 +61,7 @@ Project structure (organized):
 - examples/  usage examples
 - tools/     utility/debug scripts
 - docs/      handoff notes
+- logo.png   project logo (ใช้เป็น PyPI icon ผ่าน README)
 
 Current key files:
 - README.md
@@ -64,6 +70,7 @@ Current key files:
 - NOTICE
 - CITATION.cff
 - CHANGELOG.md
+- logo.png
 
 Important module coverage already implemented:
 - Builtins wrapper: libs/ไพท่อน.py, libs/ไพท่อน_builtins.py
@@ -87,15 +94,17 @@ Known caveats for next AI:
 
 3) Minor cleanup candidates (not blockers)
 - libs/เวลา.py has some unused imports.
-- docs/ older wording may still mention the old project name in some historical notes.
+- Old repo OteEnded/Pythai should be archived with redirect message.
+- No git tag created on Thaithon repo yet (v0.1.0 and v0.1.1 tags pending).
 
 What has already been done and should not be re-done blindly:
 - Do NOT re-initialize git.
-- Do NOT recreate tag v0.1.0.
-- GitHub release v0.1.0 already exists and has assets.
+- Package name is thaithon (NOT pythai — that name is taken by someone else on PyPI).
+- thaithon 0.1.0 and 0.1.1 already exist on PyPI — do NOT re-upload same version.
+- logo.png already pushed to GitHub and referenced in README.
 
 If continuing work in a new chat/session:
-1. Verify current folder path after rename and open correct root.
+1. Workspace root is c:\data\Pythai (folder name ยังไม่ได้ rename แต่เป็น repo Thaithon แล้ว)
 2. Run smoke checks:
 	 - python examples/y.py
 	 - python tests/test_data_libs.py
@@ -103,9 +112,11 @@ If continuing work in a new chat/session:
 	 - update pyproject.toml + README.md + CHANGELOG.md together.
 4. Before next release:
 	 - bump version in pyproject.toml
+	 - update CITATION.cff version
 	 - rebuild dist
 	 - twine check
-	 - create tag and release notes
+	 - twine upload
+	 - create git tag: git tag v0.x.x && git push origin v0.x.x
 
 Release command references:
 - Build:
