@@ -35,6 +35,8 @@
 - File/Path (`เส้นทาง.py`)
 - CSV (`ซีเอสวี.py`)
 - System/OS (`ระบบ.py`)
+- Web/HTTP (`เว็บ.py`)
+- Argument parsing (`อาร์กิวเมนต์.py`)
 
 ## หมายเหตุ Unicode
 

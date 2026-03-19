@@ -1,5 +1,5 @@
 """
-ระบบ - Thai wrapper for Python's os and sys modules
+ระบบ - Thai wrapper for Python's os, sys, and subprocess modules
 A library that provides Thai-named access to system and environment operations.
 
 Usage:
@@ -10,6 +10,7 @@ Usage:
 
 import os
 import sys
+import subprocess
 
 
 # Current directory
@@ -118,6 +119,39 @@ def ออก(รหัส=0):
     sys.exit(รหัส)
 
 
+# Subprocess (process management)
+def รันกระบวนการ(คำสั่ง, *, จับผลลัพธ์=False, รหัส_encoding="utf-8", shell=False):
+    """รันกระบวนการ (subprocess.run) คืน CompletedProcess
+    ถ้า จับผลลัพธ์=True จะคืนข้อความ stdout แทน"""
+    ผล = subprocess.run(
+        คำสั่ง,
+        capture_output=จับผลลัพธ์,
+        text=True,
+        encoding=รหัส_encoding,
+        shell=shell,
+    )
+    if จับผลลัพธ์:
+        return ผล.stdout
+    return ผล
+
+
+def รันและได้ผล(คำสั่ง, *, รหัส_encoding="utf-8", shell=False):
+    """รันกระบวนการและคืน stdout เป็นข้อความ (subprocess.check_output)"""
+    return subprocess.check_output(
+        คำสั่ง,
+        text=True,
+        encoding=รหัส_encoding,
+        shell=shell,
+        stderr=subprocess.DEVNULL,
+    ).strip()
+
+
+def รันแบบเรียลไทม์(คำสั่ง, *, shell=False):
+    """รันกระบวนการแบบ interactive (stdout แสดงสด) คืน exit code"""
+    ผล = subprocess.run(คำสั่ง, shell=shell)
+    return ผล.returncode
+
+
 __all__ = [
     "โฟลเดอร์ปัจจุบัน",
     "เปลี่ยนโฟลเดอร์",
@@ -140,4 +174,8 @@ __all__ = [
     "โฟลเดอร์แม่",
     "อาร์กิวเมนต์",
     "ออก",
+    # Subprocess
+    "รันกระบวนการ",
+    "รันและได้ผล",
+    "รันแบบเรียลไทม์",
 ]

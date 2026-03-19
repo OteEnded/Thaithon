@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-03-19
+
+### Added
+- New module `เว็บ.py` — Thai wrapper for `urllib` (GET, POST, JSON, download, URL utilities)
+- New module `อาร์กิวเมนต์.py` — Thai wrapper for `argparse`
+- Extended `ระบบ.py` with subprocess functions: `รันกระบวนการ`, `รันและได้ผล`, `รันแบบเรียลไทม์`
+
 ## [0.2.0] - 2026-03-19
 
 ### Added

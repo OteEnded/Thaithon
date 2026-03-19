@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "thaithon"
-version = "0.2.0"
+version = "0.3.0"
 description = "Thai-first Python helper libraries with Thai function names"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -42,5 +42,7 @@ py-modules = [
     "เรกซ์",
     "เส้นทาง",
     "ซีเอสวี",
-    "ระบบ"
+    "ระบบ",
+    "เว็บ",
+    "อาร์กิวเมนต์"
 ]
