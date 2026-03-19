@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-03-19
+
+### Added
+- Added logo to README and PyPI project page.
+
 ### Changed
 - Renamed package on PyPI from `pythai` to `thaithon`.
 
