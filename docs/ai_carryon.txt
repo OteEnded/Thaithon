@@ -23,7 +23,7 @@ Main branch and release status:
 	- d79f27f [chore]: bump version to 0.1.1 and add logo to README
 	- 43101a3 [chore]: add logo and update README heading to Thaithon
 	- b6fab8c [chore]: rename package to thaithon and migrate repo to OteEnded/Thaithon
-- Tags: v0.1.0 (บน Pythai repo เก่า, ไม่มีบน Thaithon repo ใหม่ยังไม่ได้สร้าง)
+- Tags: v0.1.0, v0.1.1 (บน Thaithon repo แล้ว)
 - Latest PyPI release: thaithon 0.1.1
 - PyPI URL: https://pypi.org/project/thaithon/0.1.1/
 
@@ -95,7 +95,7 @@ Known caveats for next AI:
 3) Minor cleanup candidates (not blockers)
 - libs/เวลา.py has some unused imports.
 - Old repo OteEnded/Pythai should be archived with redirect message.
-- No git tag created on Thaithon repo yet (v0.1.0 and v0.1.1 tags pending).
+- No git tag created on Thaithon repo yet — DONE, v0.1.0 and v0.1.1 pushed.
 
 What has already been done and should not be re-done blindly:
 - Do NOT re-initialize git.
