@@ -10,46 +10,11 @@
 
 Thaithon is an experimental layer that lets you write Python code using Thai-style syntax.
 
-## Install
-
-```bash
-pip install thaithon
-```
-
-## Example
-
-```python
-from thaithon import พิมพ์
-
-พิมพ์("สวัสดีโลก")
-```
-
-## What is this?
-
-Thaithon is designed for:
-
-- Learning Python in a more familiar language
-- Experimenting with alternative syntax
-- Having fun with code
-
-## What this is NOT
-
-- Not a replacement for Python
-- Not intended for production use
-
-## Why?
-
-Because programming should be expressive - and language shouldn't be a barrier.
-
-## Status
-
-Experimental 🚧
-
 ## โครงสร้างโปรเจกต์
 
 - `libs/`
   - รวม library หลักทั้งหมด
-  - `ไพท่อน.py`, `ไพท่อน_builtins.py`
+  - `ไพทอน.py`, `ไพทอน_builtins.py`
   - `คณิต.py`, `เวลา.py`, `สุ่ม.py`, `สถิติ.py`
   - `เจสัน.py`, `เรกซ์.py`, `เส้นทาง.py`, `ซีเอสวี.py`
 - `examples/`
@@ -64,7 +29,7 @@ Experimental 🚧
 
 ## หมวด library ที่มีแล้ว
 
-- Built-ins ภาษาไทย (`ไพท่อน.py`)
+- Built-ins ภาษาไทย (`ไพทอน.py`)
 - Math (`คณิต.py`)
 - DateTime + sleep (`เวลา.py`)
 - Random (`สุ่ม.py`)
@@ -92,7 +57,7 @@ pip install thaithon
 จากนั้นสามารถ import โมดูลภาษาไทยได้ตรง ๆ เช่น:
 
 ```python
-from ไพท่อน import พิมพ์, ความยาว
+from ไพทอน import พิมพ์, ความยาว
 import คณิต
 import เวลา
 import สถิติ
@@ -125,7 +90,7 @@ LIB_DIR = ROOT_DIR / "libs"
 if str(LIB_DIR) not in sys.path:
   sys.path.insert(0, str(LIB_DIR))
 
-from ไพท่อน import พิมพ์
+from ไพทอน import พิมพ์
 import เวลา
 
 พิมพ์("ตอนนี้:", เวลา.เป็นข้อความ(เวลา.ตอนนี้()))

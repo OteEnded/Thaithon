@@ -6,7 +6,7 @@ LIB_DIR = ROOT_DIR / "libs"
 if str(LIB_DIR) not in sys.path:
 	sys.path.insert(0, str(LIB_DIR))
 
-from ไพท่อน import *
+from ไพทอน import *
 
 เอ็กซ์ = รับค่า("ป้อนค่า x: ")
 

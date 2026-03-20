@@ -7,7 +7,7 @@ import os
 
 # Get the Thai filename
 files = os.listdir('.')
-thai_file = [f for f in files if 'ไพท่อน' in f and f.endswith('.py')][0]
+thai_file = [f for f in files if 'ไพทอน' in f and f.endswith('.py')][0]
 
 # Load module
 namespace = {}

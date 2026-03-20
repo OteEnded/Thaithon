@@ -48,7 +48,7 @@ Packaging state:
 - Build backend: setuptools
 - Package name on PyPI: thaithon (เปลี่ยนจาก pythai ที่ถูกคนอื่น claim ไว้แล้ว)
 - py-modules come from libs/:
-	- ไพท่อน, ไพท่อน_builtins, คณิต, เวลา, สุ่ม, สถิติ, เจสัน, เรกซ์, เส้นทาง, ซีเอสวี, ระบบ, เว็บ, อาร์กิวเมนต์
+	- ไพทอน, ไพทอน_builtins, คณิต, เวลา, สุ่ม, สถิติ, เจสัน, เรกซ์, เส้นทาง, ซีเอสวี, ระบบ, เว็บ, อาร์กิวเมนต์
 - logo.png อยู่ที่ root, ถูก reference ใน README.md ผ่าน GitHub raw URL
 - Last validation performed:
 	- python -m build => success (0.3.0)
@@ -74,7 +74,7 @@ Current key files:
 - logo.png
 
 Important module coverage already implemented:
-- Builtins wrapper: libs/ไพท่อน.py, libs/ไพท่อน_builtins.py
+- Builtins wrapper: libs/ไพทอน.py, libs/ไพทอน_builtins.py
 - Math: libs/คณิต.py
 - Date/time + sleep: libs/เวลา.py
 - Random: libs/สุ่ม.py

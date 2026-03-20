@@ -7,7 +7,7 @@ import re
 
 # Find the Thai file
 files = os.listdir('.')
-thai_file = [f for f in files if 'ไพท่อน' in f and f.endswith('.py')][0]
+thai_file = [f for f in files if 'ไพทอน' in f and f.endswith('.py')][0]
 
 # Read the file
 with open(thai_file, 'r', encoding='utf-8') as f:

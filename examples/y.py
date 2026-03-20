@@ -6,7 +6,7 @@ LIB_DIR = ROOT_DIR / "libs"
 if str(LIB_DIR) not in sys.path:
 	sys.path.insert(0, str(LIB_DIR))
 
-from ไพท่อน import *
+from ไพทอน import *
 
 ตัวเลขจำนวนเต็ม = จำนวนเต็ม("12")
 ตัวเลขจำนวนจริง = จำนวนจริง("3.5")
