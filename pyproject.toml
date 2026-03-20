@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "thaithon"
-version = "0.4.0"
+version = "0.4.1"
 description = "Thai-first Python helper libraries with Thai function names"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
 authors = [
     { name = "OteEnded", email = "ratnaritjumnong@gmail.com" },
-    { name = "Pythai Contributors" }
+    { name = "Thaithon Contributors" }
 ]
 keywords = ["thai", "python", "education", "helpers", "localization"]
 classifiers = [
